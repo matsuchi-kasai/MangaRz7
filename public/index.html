@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manga Rz7 - Baca Manga Online</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo" onclick="goHome()">📖 Manga<span>Rz7</span></a>
+  <nav>
+    <a onclick="goHome()">Home</a>
+    <a onclick="loadCategory('manga')">Manga</a>
+    <a onclick="loadCategory('manhwa')">Manhwa</a>
+    <a onclick="loadCategory('manhua')">Manhua</a>
+    <a onclick="showHistory()">History</a>
+  </nav>
+  <div class="search-box">
+    <input id="searchInput" placeholder="Cari manga..." onkeydown="if(event.key==='Enter') doSearch()">
+  </div>
+</header>
+
+<main id="app"></main>
+
+<!-- AD OVERLAY -->
+<div class="ad-overlay" id="adOverlay">
+  <div class="ad-box">
+    <div class="ad-banner">🎌 SPONSOR MANGA RZ7 🎌</div>
+    <h3>Iklan Sebentar...</h3>
+    <p>Konten dibuka setelah iklan selesai</p>
+    <div class="ad-timer" id="adTimer">20</div>
+    <button class="ad-skip" id="adSkip" disabled>Menunggu...</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Manga Rz7 — Data dari MangaDex API (Official)</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
